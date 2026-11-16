@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            form {
+                text-decoration: none;
+                box-sizing: border-box;
+                border: 4px solid;
+                border-color: aqua;
+                background-color: #333333;
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                
+
+            }
+            input {
+                margin: 15px;
+                cursor: pointer;
+                transition: 0.1s ease-in-out;
+            }
+            input:hover{
+                color: rgb(228, 228, 228);
+               transform: scale(1.1);
+
+            }
+            .piano{
+                color: chartreuse;
+                margin: 15px;
+                margin-top: 30px;
+            }
+            button {
+                margin: 30px;
+                padding: 16px;
+                background-color: rgb(72, 24, 155);
+                box-shadow: black;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            button:hover{
+                color: aliceblue;
+                transform: scale(1.1);
+                border-radius: 15px;
+            }
+            h2 {
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: 15px;
+                border: 4px solid;
+                background-color: crimson;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            h2:hover{
+                background-color: darkred;
+                color: white;
+                transform: scale(1.02);
+
+            }
+            label{
+                 cursor: pointer;
+                transition: 0.3s ease;
+
+            }
+            label:hover{
+                color: rgb(228, 228, 228);
+               transform: scale(1.2);
+
+            }
+            body{
+                background-color: black;
+            }
+            .error{
+                color: red;
+                margin: 15px;
+            }
+            .result{
+                color: aliceblue;
+                margin: 15px;
+            }
+        </style>
+    </head>
+    
+    
+    <body>
+        <h2>
+           // Select your subject &oopf;//
+        </h2>
+        <form action="" onsubmit="validateAndDisplay(event)"> 
+            <input type="checkbox" id="sub1" name="subject" value="Mathematics">
+            <label for="sub1">Mathematics</label><br><br>
+
+            <input type="checkbox" name="subject" id="sub2" value="physics">
+            <label for="sub2">physics</label><br><br>
+
+            <input type="checkbox" name="subject" value="chemistry" id="sub3">
+            <label for="sub3"> chemistry</label><br><br>
+
+            <input type="checkbox" name="subject" value="Computer Science" id="sub4">
+            <label for="sub4">Computer Science</label><br><br>
+
+            <input type="checkbox" name="subject" value="English" id="sub5">
+            <label for="sub5"> English</label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="output" class="result"></div>
+
+        <script type="text/javascript">
+
+           function validateAndDisplay(event) {
+                event.preventDefault();
+
+                const checkbox = document.getElementsByName('subject');
+                const selectedSubjects = [];
+                const outputDiv = document.getElementById('output');
+
+                for(let i = 0;i < checkbox.length; i++) {
+                    if(checkbox[i].checked) {
+                        selectedSubjects.push(checkbox[i].value);
+                    }
+                }
+
+                if (selectedSubjects.length == 0) {
+                    outputDiv.className = "error";
+                    outputDiv.innerHTML = "please enter at least subject.";
+                    return false;
+                }
+
+                outputDiv.className = "result";
+                outputDiv.innerHTML = "<strong>Selected Subjects:</strong><br>" + selectedSubjects.join("<br>");
+                return true;
+            }
+        </script>
+    </body>
+</html>
