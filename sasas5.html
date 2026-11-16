@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    
+    <script type="text/javascript">
+        let principle = parseFloat(prompt("enter the principle value:"));
+        let rate = parseFloat(prompt("enter the value of rate:"));
+        let years = parseFloat(prompt("enter no of years;"));
+
+        let simpleIntrest = (principle*rate*years) / 100;
+
+        let totalAmount = principle * Math.pow((1 + rate / 100), years);
+        let compoundintrest = totalAmount - principle;
+
+        console.log("principle:" + principle);
+        console.log("rate:" + rate);
+        console.log("time:" + years);
+        console.log("Simple Intrest:" + simpleIntrest);
+        console.log("compoundintrest:" + compoundintrest);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+       <title>first script</title>
+    </head>
+    <body>
+        <h1>Welcome page</h1>
+<p id="greeting">Hi!</p>
+
+<div id="one" class="example">Hi!</div>
+<div id="two" class="example">Hi!there</div>
+<div id="three" class="something">Hi! one</div>
+<script>
+
+document.body.children.greeting.innerText = "Bye!";
+//document.body.children.greeting.innerText = "<p>Bye!</p>";
+//document.body.children.greeting.innerHTML = "<b>Bye!</b>";
+document.write(document.getElementById("two").innerHTML);
+document.write("<br>");
+let x = document.getElementsByTagName("div");
+document.write(x[0].innerHTML);
+document.write("<br>");
+
+let y = document.getElementsByTagName("div");
+
+for (let i = 0; i < y.length; i++) {
+    document.write(y[i].innerHTML + "<br>");
+}
+document.write("<br>");
+document.write(document.getElementsByTagName("div").item(1).innerHTML);
+document.write("<br>");
+document.write("<br>");
+document.write(document.getElementsByTagName("div").namedItem("three").innerHTML);
+document.write("<br>");
+document.write(document.getElementsByClassName("example")[1].innerHTML);
+
+//Accessing elements with a CSS selector
+document.write("<br>");
+document.write(document.querySelector("div").innerHTML);// first matching div
+document.write("<br>");
+document.write(document.querySelector(".something").innerHTML);//aceess based on class.
+document.write("<br>");
+
+let z = document.querySelectorAll("div");
+
+for (let i = 0; i < z.length; i++) {
+    document.write(z[i].innerHTML + "<br>");
+}
+     </script>
+    </body>
+
+</html>

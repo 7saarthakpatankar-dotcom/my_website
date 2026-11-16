@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+
+        
+        <script type="text/javascript">
+            //factorial
+            let num = 8;
+            function calculateFactorial(number){
+                if(number == 0)
+                return 1;
+            else
+            return number * calculateFactorial(number - 1);
+            }
+            document.write("the factorial of " + num + "is" + calculateFactorial(num));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>event handler2</title>
+    </head>
+
+    <body>
+
+<div class="main-block main-block--js">
+    <h3>Calculate the cost of fuel</h3>
+    <form>
+        <legend>Fuel type (1-gasoline, 2-diesel):</legend>
+        <input type="number" min="1" max="2" name="fuel_type" id="fuelType"></input>
+        <legend>How many liters?</legend>
+        <input type="number" min="1" max="100" name="fuelVolume" id="fuelVolume"></input><br>
+    </form>
+    <button class="button-box--js"> CALCULATE</button>   <!---------onclick="calculateBill()----->
+    <p class="result--js"></p>
+    </div>
+<script>
+    const buttonStart =
+    document.querySelector('.button-box--js');
+    buttonStart.addEventListener('click', (e) => {
+    //Variable definition
+    const fuel = document.getElementById('fuelType').value;
+    const volume = document.getElementById('fuelVolume').value;
+    let fuelPrice = 0;
+
+    //Assigning a Value to the fuelPrice variable
+    if (fuel == 1) {
+        fuelPrice = 113.0;
+    } else if (fuel == 2) {
+        fuelPrice = 108.0;
+    } else {
+        fuelPrice = 0.0;
+    };
+
+    //Calculation of the value of the purchased fuel
+    let toPay = fuelPrice * parseFloat(volume);
+
+    //Displaying the result on the page
+    document.querySelector('.result--js').textContent =
+        `Billing value: ${toPay} Rs`;
+});
+</script>
+
+ <!--function calculateBill() {
+
+    const fuel = document.getElementById('fuelType').value;
+    const volume = document.getElementById('fuelVolume').value;
+
+    let fuelPrice = 0;
+
+    if (fuel == 1) {
+        fuelPrice = 113.0;
+    }
+    else if (fuel == 2) {
+        fuelPrice = 108.0;
+    }
+    else {
+        fuelPrice = 0.0;
+    }
+
+    let toPay = fuelPrice * parseFloat(volume);
+
+    document.querySelector('.result--js').textContent =
+       "Billing value: " + toPay + " Rs";
+} 
+  -->
+ 
+
+
+</body>
+</html>

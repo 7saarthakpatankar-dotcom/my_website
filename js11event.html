@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <titile>event handler</titile>
+    </head>
+    <body>
+      <html>
+<head>
+<style>
+fieldset
+{
+background-color: pink;
+}
+legend
+{
+background-color: gray;
+color: white;
+padding: 5px 10px;
+}
+input
+{
+margin: 5px;
+}
+</style>
+</head>
+<body>
+<form action=" ">
+<fieldset>
+<legend>Personalia:</legend>
+<label for="fname">First name:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname"><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email"><br><br>
+<label for="birthday">Birthday:</label>
+<input type="date" id="birthday" name="birthday"><br><br>
+</fieldset>
+</form>
+<p>Click the button to get the details:</p>
+<button onclick="myFunction()">Details</button>
+<BR>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+function myFunction()
+{
+var y = document.getElementById("fname").value;
+document.getElementById("demo").innerHTML = y;
+var x = document.getElementById("lname").value;
+document.getElementById("demo1").innerHTML = x;
+var z = document.getElementById("email").value;
+document.getElementById("demo2").innerHTML = z;
+var w = document.getElementById("birthday").value;
+document.getElementById("demo3").innerHTML = w;
+}
+
+</script>
+</body>
+</html>
+</script> 
+    
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <title></title>
+    <style type="text/css">
+        body{
+            background:#333333;
+            align-items: flex-start;
+        }
+        button{
+            background-color: aquamarine;
+            color: black;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: cornflowerblue;
+        }
+
+    </style>
+    </head>
+    <body>
+
+        <h2>BASIC CALCULATOR</h2>
+
+        <button onclick="calculator()"> Calculate</button>
+        <h3 id="result"> result</h3>
+
+
+        <script type="text/javascript">
+            let a = parseFloat(prompt("enetr a:"));
+            let b = parseFloat(prompt("enetr b:"));
+            let op = "+";
+
+            function calculator(a,b,op) {
+                if(op == "-") {
+                    result = a - b;
+
+                }
+                else {
+                    result =  a + b;
+                }
+            
+            console.log("Addition = " + calculator(a,b,op));
+
+            op = "-";
+
+
+            console.log("subtraction = " + calculator(a,b,op));
+            document.getElementById("result").innerHTML = "result:" + result;
+            }
+        </script>
+    </body>
+
+
+    </html>
